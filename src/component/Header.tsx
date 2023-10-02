@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styles from "./tabBar.module.scss";
+import styles from "./Header.module.scss";
 import classNames from "classnames";
 import Title from "./Title";
 

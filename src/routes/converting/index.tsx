@@ -1,6 +1,6 @@
 //import styles from "./converting.module.scss";
 
-import TabBar from "../../component/TabBar";
+import TabBar from "../../component/Header";
 
 const ConvertingPage = () => {
   return (

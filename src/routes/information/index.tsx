@@ -1,12 +1,14 @@
 //import styles from "./information.module.scss";
 
-import TabBar from "../../component/TabBar";
+import TabBar from "../../component/Header";
 
 const InfomationPage = () => {
   return (
     <div>
       <TabBar />
-      정보 페이지
+      <div>
+        <h2>채널리스트 작업툴 사용하는 방법</h2>
+      </div>
     </div>
   );
 };
