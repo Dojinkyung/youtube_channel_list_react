@@ -1,25 +1,30 @@
 @use "/src/styles/mixins/flexbox";
 @use "/src/styles/constants/colors";
-
-.nav {
+.page {
   @include flexbox.flexbox(center, center);
-  flex-direction: row;
-  width: 360px;
-  height: 50px;
-  background-color: colors.$WHITE;
-
-  .navBtn {
+  flex-direction: column;
+  .nav {
     @include flexbox.flexbox(center, center);
-    width: 120px;
-    height: 30px;
-    margin: 8px;
-    font-size: 16px;
-    line-height: 19px;
-    color: colors.$SOSO;
+    flex-direction: row;
+    width: 100vw;
+    height: 100px;
+    background-color: colors.$GRAYD;
 
-    &.isActive {
-      background: colors.$GRAYD;
-      border-radius: 10px;
+    .navBtn {
+      @include flexbox.flexbox(center, center);
+      width: 120px;
+      height: 30px;
+      margin: 0px 100px 0px 100px;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 19px;
+      color: colors.$GRAY3;
+      text-decoration-line: none;
+
+      &.isActive {
+        background: colors.$MAINCOLOR;
+        border-radius: 10px;
+      }
     }
   }
 }
