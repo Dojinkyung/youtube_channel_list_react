@@ -1,0 +1,42 @@
+@use "/src/styles/constants/colors";
+@use "/src/styles/mixins/flexbox";
+
+.inputForm {
+  @include flexbox.flexbox(between, center);
+  width: 50%;
+  height: 60px;
+  padding-left: 10px;
+  overflow: hidden;
+  background: colors.$WHITE;
+  border-radius: 50px;
+  .input {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 20px;
+    color: colors.$BLACK;
+    border-radius: 10px;
+    border: none;
+  }
+  input:focus {
+    outline: none;
+  }
+  .input[type="text"]::placeholder {
+    font-size: 20px;
+    color: colors.$GRAYD;
+  }
+  button {
+    background-color: colors.$MAINCOLOR;
+    color: colors.$BLACK;
+    height: 100%;
+    width: 15%;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 16px 16px;
+    cursor: pointer;
+    border: none;
+    &:focus,
+    &:focus-visible {
+      outline: 2px solid colors.$MAINCOLOR;
+    }
+  }
+}
