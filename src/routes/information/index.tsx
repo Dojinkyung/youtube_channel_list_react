@@ -1,13 +1,13 @@
-//import styles from "./information.module.scss";
+import styles from "./information.module.scss";
 
 import TabBar from "../../component/TabBar";
 
 const InfomationPage = () => {
   return (
-    <div>
+    <main className={styles.centering}>
       <TabBar />
       <div>
-        <h2>채널리스트 작업툴 사용하는 방법</h2>
+        <h1 className={styles.title}>채널리스트 작업툴 사용하는 방법</h1>
         <p>
           채널리스트 페이지 사용법 1.구글 로그인 후 유튜브 api key를 발급
           받습니다
@@ -22,7 +22,7 @@ const InfomationPage = () => {
           dojinkyung98@gmail.com로 메일 주세요!
         </p>
       </div>
-    </div>
+    </main>
   );
 };
 
