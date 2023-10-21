@@ -6,7 +6,10 @@ const ConvertingPage = () => {
   return (
     <div>
       <TabBar />
-      <p>변환 페이지</p>
+      <h2>유튜브 채널 정보 추출하기</h2>
+      <input type="file" />
+      <input type="text" />
+      <button>제출</button>
     </div>
   );
 };
