@@ -6,7 +6,7 @@ const InfomationPage = () => {
   return (
     <main className={styles.centering}>
       <TabBar />
-      <div>
+      <div className={styles.elements}>
         <h1 className={styles.title}>채널리스트 작업툴 사용하는 방법</h1>
         <p>
           채널리스트 페이지 사용법 1.구글 로그인 후 유튜브 api key를 발급
