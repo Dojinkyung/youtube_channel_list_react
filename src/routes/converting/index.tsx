@@ -1,3 +1,4 @@
+import ExcelUploader from "../../component/ExcelUploader";
 import Input from "../../component/Input";
 import TabBar from "../../component/TabBar";
 import styles from "./converting.module.scss";
@@ -9,6 +10,7 @@ const ConvertingPage = () => {
       <div className={styles.elements}>
         <h1 className={styles.title}>유튜브 채널 정보 추출하기</h1>
         <Input />
+        <ExcelUploader />
       </div>
     </main>
   );
