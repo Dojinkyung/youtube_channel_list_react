@@ -23,16 +23,13 @@ const ExcelUploader = () => {
             const workbook = XLSX.read(result, { type: "array" });
             const sheetName = workbook.SheetNames[0];
             const worksheet = workbook.Sheets[sheetName];
-            const json = XLSX.utils.sheet_to_json(worksheet);
-            console.log("변경완료");
-            const jsonData = JSON.stringify(json);
-            console.log("JSON 데이터:", jsonData);
-
+            const json = XLSX.utils.sheet_to_json(worksheet); // json파일로 변경
+            const jsonData = JSON.stringify(json); //json파일->string으로 변환(redux)
             dispatch(setExcel(jsonData));
           }
         };
 
-        reader.readAsArrayBuffer(file); // 파일을 읽어옴
+        reader.readAsArrayBuffer(file);
       }
     }
   };

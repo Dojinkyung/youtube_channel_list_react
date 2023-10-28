@@ -13,8 +13,6 @@ const Input = () => {
   }, [dispatch, key]);
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    dispatch(setApiKey(key));
-    console.log(key);
   };
   return (
     <form className={styles.inputForm} onSubmit={onSubmit}>
