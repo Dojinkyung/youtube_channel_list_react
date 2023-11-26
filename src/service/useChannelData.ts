@@ -21,6 +21,8 @@ const useChannelData = (fileData: string, enabled: boolean) => {
           try {
             let trimmedUrl = excelData.YTURL.trim();
             let channelId = trimmedUrl.slice(-24);
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+
             const response = await axios.get(
               `https://www.googleapis.com/youtube/v3/channels?key=${key}&id=${channelId}&part=snippet,statistics`
             );
@@ -32,13 +34,12 @@ const useChannelData = (fileData: string, enabled: boolean) => {
                 response.data.items[0].statistics?.subscriberCount || undefined;
               const view =
                 response.data.items[0].statistics?.viewCount || undefined;
-              return ChangeData(excelData, title, subscriber, view);
+              return ChangeData(excelData, title, subscriber, view, false);
             } else {
               throw new Error("API 응답 상태가 200이 아닙니다.");
             }
           } catch (error) {
-            console.error("Error fetching channel data:", error);
-            return null;
+            return ChangeData(excelData, excelData.채널명, 0, 0, true);
           }
         })
       );
